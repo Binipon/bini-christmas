@@ -21,8 +21,9 @@ function calculateChristmasCountdown(){
         //This year's Christmas Day has already passed.
         nextChristmasYear = nextChristmasYear + 1;
     }
- 
-    let nextChristmasDate = nextChristmasYear + '-12-25T00:00:00.000Z';
+    //最後にZをつけるとUTCになる。付けないと現地の時間になる
+    // let nextChristmasDate = nextChristmasYear + '-12-25T00:00:00.000Z';
+    let nextChristmasDate = nextChristmasYear + '-12-25T00:00:00.000';
     let christmasDay = new Date(nextChristmasDate);
  
     //Get the difference in seconds between the two days.
